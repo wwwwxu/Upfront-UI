@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Blender';
+  src: url('/fonts/Blender-Book.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Blender';
+  src: url('/fonts/Blender-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Blender';
+  src: url('/fonts/Blender-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Blender';
+  src: url('/fonts/Blender-Strong.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Monaspace Neon Var';
+  src: url('/fonts/MonaspaceNeonVar.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* ── Font size overrides — Blender renders ~2px smaller than system fonts.
+        Shift the lower end of the scale up so nothing reads smaller than 14px. */
+  --text-xs: 0.875rem;          /* 14px (was 12px) */
+  --text-sm: 1rem;              /* 16px (was 14px) */
+  --text-base: 1.125rem;        /* 18px (was 16px) */
+  --text-lg: 1.25rem;           /* 20px (was 18px) */
+
+  /* ── Fonts ──────────────────────────────────────── */
+  --font-sans:    'Blender', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Blender', ui-sans-serif;
+  --font-mono:    'Monaspace Neon Var', ui-monospace, monospace;
+
+  /* ── Color tokens ────────────────────────────────── */
+  /* Background */
+  --color-bg-page:    #FFFFFF;
+  --color-bg-surface: #FFFFFF;
+  --color-bg-subtle:  #F4F4F5;
+  --color-bg-dark:    #131316;
+
+  /* Text */
+  --color-text-primary:   #131316;
+  --color-text-secondary: #6B6B76;
+  --color-text-hint:      #A1A1AA;
+  --color-text-on-dark:   #FFFFFF;
+
+  /* Border */
+  --color-border-subtle: #F6F6F6;
+  --color-border:        #E9E9E9;
+  --color-border-medium: #D0D0D0;
+  --color-border-strong: #121212;
+
+  /* Interactive */
+  --color-accent:           #2563EB;
+  --color-accent-bg:        #EFF4FF;
+  --color-btn-primary-bg:   #131316;
+  --color-btn-primary-text: #FFFFFF;
+
+  /* Brand */
+  --color-brand-red:   #8E0001;
+  --color-brand-green: #29CC6A;
+
+  /* Status */
+  --color-error:   #D90000;
+  --color-success: #1CC286;
+
+  /* Primitives — Gray */
+  --color-gray-50:  #FAFAFA;
+  --color-gray-100: #F4F4F5;
+  --color-gray-200: #E4E4E7;
+  --color-gray-300: #D1D1D6;
+  --color-gray-400: #A1A1AA;
+  --color-gray-500: #71717A;
+  --color-gray-600: #52525B;
+  --color-gray-700: #3F3F46;
+  --color-gray-800: #27272A;
+  --color-gray-900: #18181B;
+
+  /* ── Radius ──────────────────────────────────────── */
+  --radius-none:   0px;
+  --radius-sm:     2px;
+  --radius-s:      4px;
+  --radius-m:      8px;
+  --radius-l:      12px;
+  --radius-pill:   64px;
+  --radius-circle: 999px;
+}
+
+*, *::before, *::after {
+  border-color: var(--color-border);
+}
+
+html, body {
+  font-family: 'Blender', ui-sans-serif, system-ui, sans-serif;
+  background-color: var(--color-bg-page);
+  color: var(--color-text-primary);
+}
+
+/* ── Scrollbar ───────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-gray-200); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-gray-300); }
+
+/* ── Code block ──────────────────────────────────────── */
+.shiki {
+  border-radius: var(--radius-m);
+  font-family: 'Monaspace Neon Var', ui-monospace, monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 16px;
+  overflow-x: auto;
+}
+
+/* ── Sidebar layout offset ───────────────────────────── */
+.has-sidebar { margin-left: 220px; }

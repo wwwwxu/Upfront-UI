@@ -1,0 +1,2 @@
+{"ts":"2026-05-04T21:23:33.524Z","cmd":"goto","args":"http://localhost:3000/principles","origin":"http://localhost:3000/principles","durationMs":142,"status":"ok","hasCookies":false,"mode":"launched"}
+{"ts":"2026-05-04T21:23:36.655Z","cmd":"screenshot","args":"/tmp/principles.png","origin":"http://localhost:3000/principles","durationMs":54,"status":"ok","hasCookies":false,"mode":"launched"}
