@@ -15,9 +15,9 @@ function SwatchRow({ label, hex, desc }: { label: string; hex: string; desc: str
       <Swatch value={hex} border={hex === '#FFFFFF' || hex === '#FAFAFA' || hex === '#F3F3F3' || hex === '#F6F6F6'} />
       <div className="flex-1 min-w-0">
         <p className="text-xs font-medium text-(--color-text-primary)">{label}</p>
-        <p className="text-xs text-(--color-text-hint) mt-0.5 truncate">{desc}</p>
+        <p className="text-xs text-(--color-text-secondary) mt-0.5 truncate">{desc}</p>
       </div>
-      <span className="text-xs font-mono text-(--color-text-hint)">{hex}</span>
+      <span className="text-xs text-(--color-text-secondary)">{hex}</span>
     </div>
   )
 }
@@ -27,8 +27,8 @@ function ScaleRow({ step, hex }: { step: string; hex: string }) {
   return (
     <div className="flex items-center gap-3 px-5 py-2 bg-(--color-bg-surface)">
       <div className="w-7 h-7 rounded shrink-0" style={{ backgroundColor: hex, border: isLight ? '1px solid #E4E4E7' : undefined }} />
-      <span className="text-xs font-mono text-(--color-text-hint) w-10">{step}</span>
-      <span className="text-xs font-mono text-(--color-text-primary)">{hex}</span>
+      <span className="text-xs text-(--color-text-secondary) w-10">{step}</span>
+      <span className="text-xs text-(--color-text-primary)">{hex}</span>
     </div>
   )
 }
@@ -50,7 +50,7 @@ export default function ColorsPage() {
             <div key={b.name} className="rounded-(--radius-m) overflow-hidden border border-(--color-border)">
               <div className="h-20" style={{ backgroundColor: b.bg }} />
               <div className="p-4 bg-(--color-bg-surface)">
-                <p className="text-xs font-semibold text-(--color-text-primary) mb-1">{b.name}</p>
+                <p className="text-xs font-medium text-(--color-text-primary) mb-1">{b.name}</p>
                 <p className="text-xs text-(--color-text-secondary) leading-relaxed">{b.desc}</p>
               </div>
             </div>
@@ -103,8 +103,8 @@ export default function ColorsPage() {
                 {group.tokens.map(([step, hex]) => (
                   <div key={step} className="flex-1 flex flex-col items-center gap-2 px-3 py-4 bg-(--color-bg-surface)">
                     <div className="w-8 h-8 rounded" style={{ backgroundColor: hex }} />
-                    <span className="text-xs font-mono text-(--color-text-hint)">{step}</span>
-                    <span className="text-xs font-mono text-(--color-text-primary)">{hex}</span>
+                    <span className="text-xs text-(--color-text-secondary)">{step}</span>
+                    <span className="text-xs text-(--color-text-primary)">{hex}</span>
                   </div>
                 ))}
               </div>

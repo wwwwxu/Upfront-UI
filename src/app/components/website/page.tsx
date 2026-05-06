@@ -5,7 +5,7 @@ export default function WebsiteComponentsPage() {
         WEBSITE
       </h1>
       <div className="rounded-(--radius-m) border border-(--color-border) border-dashed p-16 flex flex-col items-center justify-center gap-3">
-        <p className="text-sm font-semibold text-(--color-text-primary)">Coming soon</p>
+        <p className="text-sm font-medium text-(--color-text-primary)">Coming soon</p>
         <p className="text-sm text-(--color-text-hint)">Website and e-commerce components will be added here.</p>
       </div>
     </div>

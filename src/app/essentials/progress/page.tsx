@@ -4,7 +4,7 @@ const variants = [
   { name: 'Default', desc: 'Loading, upload, general progress', bg: '#131316', track: '#E4E4E7', value: 60 },
   { name: 'Success', desc: 'Completed successfully, approved', bg: '#34A891', track: '#EDFAF7', value: 100 },
   { name: 'Warning', desc: 'Nearing limit, needs attention', bg: '#FF5A00', track: '#FFF5F0', value: 80 },
-  { name: 'Error', desc: 'Failed, limit exceeded', bg: '#C02020', track: '#FFF0F0', value: 45 },
+  { name: 'Error', desc: 'Failed, limit exceeded', bg: 'var(--color-error)', track: '#FFF0F0', value: 45 },
 ]
 
 function ProgressBar({ value, bg, track }: { value: number; bg: string; track: string }) {
@@ -28,10 +28,10 @@ export default function ProgressPage() {
             <div key={v.name} className="px-5 py-5 bg-(--color-bg-surface)">
               <div className="flex items-center justify-between mb-3">
                 <div>
-                  <span className="text-xs font-semibold text-(--color-text-primary)">{v.name}</span>
-                  <span className="text-xs text-(--color-text-hint) ml-3">{v.desc}</span>
+                  <span className="text-xs font-medium text-(--color-text-primary)">{v.name}</span>
+                  <span className="text-xs text-(--color-text-secondary) ml-3">{v.desc}</span>
                 </div>
-                <span className="text-xs font-mono text-(--color-text-hint)">{v.value}%</span>
+                <span className="text-xs text-(--color-text-secondary)">{v.value}%</span>
               </div>
               <ProgressBar value={v.value} bg={v.bg} track={v.track} />
             </div>
@@ -41,7 +41,7 @@ export default function ProgressPage() {
 
       <DocSection title="Indeterminate">
         <div className="rounded-(--radius-m) border border-(--color-border) bg-(--color-bg-page) p-8">
-          <p className="text-xs text-(--color-text-hint) mb-3">Use when duration is unknown — the bar animates continuously to signal activity.</p>
+          <p className="text-xs text-(--color-text-secondary) mb-3">Use when duration is unknown — the bar animates continuously to signal activity.</p>
           <div className="w-full h-2 rounded-full overflow-hidden bg-(--color-bg-subtle)">
             <div
               className="h-full w-1/3 rounded-full bg-(--color-text-primary)"
@@ -60,7 +60,7 @@ export default function ProgressPage() {
             ['Label (optional)', 'text-xs · positioned above or beside the bar', 'Contextual label or percentage — not always needed.'],
           ].map(([layer, token, note]) => (
             <DocRow key={layer as string} label={layer as string} description={note as string}>
-              <code className="text-xs font-mono text-(--color-text-secondary) bg-(--color-bg-subtle) px-2 py-1 rounded">{token}</code>
+              <code className="text-[12px] font-mono text-(--color-text-secondary) bg-(--color-bg-subtle) px-2 py-1 rounded">{token}</code>
             </DocRow>
           ))}
         </div>

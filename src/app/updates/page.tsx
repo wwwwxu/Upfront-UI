@@ -23,13 +23,13 @@ export default function UpdatesPage() {
         {updates.map((release) => (
           <div key={release.version}>
             <div className="flex items-center gap-3 mb-4">
-              <span className="text-lg font-semibold text-(--color-text-primary) font-display">
+              <span className="text-lg font-medium text-(--color-text-primary) font-display">
                 v{release.version}
               </span>
               <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-(--color-accent-bg) text-(--color-accent)">
                 {release.tag}
               </span>
-              <span className="text-sm text-(--color-text-hint)">{release.date}</span>
+              <span className="text-sm text-(--color-text-secondary)">{release.date}</span>
             </div>
             <ul className="space-y-2">
               {release.items.map((item) => (

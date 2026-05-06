@@ -76,7 +76,7 @@ export default function TabsPage() {
       <DocSection title="States" description="Both variants share four states. The active indicator differs: Line uses a 2px underline; Pill uses a filled background.">
         <div className="rounded-(--radius-m) border border-(--color-border) bg-(--color-bg-page) p-8">
           <div className="mb-8">
-            <p className="text-[10px] text-(--color-text-hint) uppercase tracking-widest mb-4">Line variant</p>
+            <p className="text-xs font-medium text-(--color-text-secondary) mb-4">Line variant</p>
             <div className="flex gap-2">
               {['Default', 'Hover', 'Active', 'Disabled'].map((s, i) => (
                 <span key={s} className={`px-4 py-2.5 text-xs font-medium border-b-2 ${
@@ -89,7 +89,7 @@ export default function TabsPage() {
             </div>
           </div>
           <div>
-            <p className="text-[10px] text-(--color-text-hint) uppercase tracking-widest mb-4">Pill variant</p>
+            <p className="text-xs font-medium text-(--color-text-secondary) mb-4">Pill variant</p>
             <div className="flex gap-1 p-1 rounded-(--radius-m) bg-(--color-bg-subtle) w-fit">
               {['Default', 'Hover', 'Active', 'Disabled'].map((s, i) => (
                 <span key={s} className={`px-4 py-1.5 text-xs font-medium rounded-(--radius-s) ${
@@ -126,7 +126,7 @@ export default function TabsPage() {
             ['Don\'t nest', 'Avoid tabs within tabs. Two levels of tab navigation is disorienting.'],
           ].map(([label, rule]) => (
             <div key={label as string} className="flex gap-6 px-5 py-3.5 bg-(--color-bg-surface)">
-              <span className="text-xs font-semibold text-(--color-text-primary) w-28 shrink-0 pt-px">{label}</span>
+              <span className="text-xs font-medium text-(--color-text-primary) w-28 shrink-0 pt-px">{label}</span>
               <p className="text-xs text-(--color-text-secondary) leading-relaxed">{rule}</p>
             </div>
           ))}

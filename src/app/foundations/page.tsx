@@ -93,7 +93,7 @@ export default function FoundationsPage() {
           >
             <div className="h-44 overflow-hidden">{item.preview}</div>
             <div className="px-4 py-3 bg-(--color-bg-surface)">
-              <p className="text-sm font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">
+              <p className="text-sm font-medium text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">
                 {item.title}
               </p>
             </div>

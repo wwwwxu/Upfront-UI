@@ -34,7 +34,7 @@ export default function TagPage() {
               <Tag label={s.label} bg={s.bg} text={s.text} border={s.border} />
               <p className="text-xs text-(--color-text-secondary) flex-1">{s.desc}</p>
               <div className="flex gap-1.5 items-center">
-                <span className="text-[10px] font-mono text-(--color-text-hint)">{s.bg}</span>
+                <span className="text-xs text-(--color-text-secondary)">{s.bg}</span>
               </div>
             </div>
           ))}
@@ -44,7 +44,7 @@ export default function TagPage() {
       <DocSection title="Sizes" description="MD is the default for most contexts. Use SM in dense layouts — tables, sidebars, tag lists — where multiple tags appear in a confined space.">
         <div className="rounded-(--radius-m) border border-(--color-border) bg-(--color-bg-page) p-8 flex items-center gap-8">
           <div className="flex flex-col items-start gap-3">
-            <span className="text-[10px] text-(--color-text-hint) uppercase tracking-widest">SM</span>
+            <span className="text-xs text-(--color-text-secondary)">SM</span>
             <div className="flex gap-2">
               {tagStyles.slice(0, 4).map((s) => (
                 <Tag key={s.label} label={s.label} bg={s.bg} text={s.text} border={s.border} size="sm" />
@@ -52,7 +52,7 @@ export default function TagPage() {
             </div>
           </div>
           <div className="flex flex-col items-start gap-3">
-            <span className="text-[10px] text-(--color-text-hint) uppercase tracking-widest">MD (default)</span>
+            <span className="text-xs text-(--color-text-secondary)">MD (default)</span>
             <div className="flex gap-2">
               {tagStyles.slice(0, 4).map((s) => (
                 <Tag key={s.label} label={s.label} bg={s.bg} text={s.text} border={s.border} size="md" />
@@ -78,7 +78,7 @@ export default function TagPage() {
               </div>
               <div>
                 <p className="text-xs font-medium text-(--color-text-primary)">{row.state}</p>
-                <p className="text-xs text-(--color-text-hint) mt-0.5">{row.desc}</p>
+                <p className="text-xs text-(--color-text-secondary) mt-0.5">{row.desc}</p>
               </div>
             </div>
           ))}
@@ -109,7 +109,7 @@ export default function TagPage() {
             ['Avoid stacking', 'Do not stack more than 4–5 tags in a single cell or context — use truncation if needed.'],
           ].map(([label, rule]) => (
             <div key={label as string} className="flex gap-6 px-5 py-3.5 bg-(--color-bg-surface)">
-              <span className="text-xs font-semibold text-(--color-text-primary) w-32 shrink-0 pt-px">{label}</span>
+              <span className="text-xs font-medium text-(--color-text-primary) w-32 shrink-0 pt-px">{label}</span>
               <p className="text-xs text-(--color-text-secondary) leading-relaxed">{rule}</p>
             </div>
           ))}

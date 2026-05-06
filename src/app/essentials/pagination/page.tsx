@@ -75,7 +75,7 @@ export default function PaginationPage() {
             ].map((s) => (
               <div key={s.label} className="flex flex-col items-center gap-2">
                 {s.el}
-                <span className="text-[10px] text-(--color-text-hint)">{s.label}</span>
+                <span className="text-xs text-(--color-text-secondary)">{s.label}</span>
               </div>
             ))}
           </div>
@@ -91,7 +91,7 @@ export default function PaginationPage() {
             ['Prev/Next', 'Always visible. Disabled (not hidden) at boundaries.'],
           ].map(([label, rule]) => (
             <div key={label as string} className="flex gap-5 px-5 py-3.5 bg-(--color-bg-surface)">
-              <span className="text-xs font-mono text-(--color-text-primary) w-24 shrink-0 pt-px">{label}</span>
+              <span className="text-[12px] font-mono text-(--color-text-primary) w-24 shrink-0 pt-px">{label}</span>
               <p className="text-xs text-(--color-text-secondary) leading-relaxed">{rule}</p>
             </div>
           ))}

@@ -55,8 +55,8 @@ export default function EffectsPage() {
             ['filter: blur()', 'Glass surfaces only', 'backdrop-filter on floating panels (not structural elements)'],
           ].map(([prop, status, alt]) => (
             <div key={prop as string} className="flex items-start gap-5 px-5 py-3 bg-(--color-bg-surface)">
-              <code className="text-xs font-mono text-(--color-text-primary) w-36 shrink-0 pt-px">{prop}</code>
-              <span className={`text-xs font-medium w-28 shrink-0 pt-px ${status === 'Never' ? 'text-red-600' : 'text-(--color-text-hint)'}`}>{status as string}</span>
+              <code className="text-[12px] font-mono text-(--color-text-primary) w-36 shrink-0 pt-px">{prop}</code>
+              <span className={`text-xs font-medium w-28 shrink-0 pt-px ${status === 'Never' ? 'text-red-600' : 'text-(--color-text-secondary)'}`}>{status as string}</span>
               <p className="text-xs text-(--color-text-secondary)">{alt as string}</p>
             </div>
           ))}
@@ -72,21 +72,21 @@ export default function EffectsPage() {
               style={{ border: `1px solid ${l.borderValue}` }}
             >
               <div>
-                <p className="text-xs font-semibold text-(--color-text-primary) mb-0.5">{l.label}</p>
-                <p className="text-xs text-(--color-text-hint) leading-relaxed">{l.desc}</p>
+                <p className="text-xs font-medium text-(--color-text-primary) mb-0.5">{l.label}</p>
+                <p className="text-xs text-(--color-text-secondary) leading-relaxed">{l.desc}</p>
               </div>
-              <code className="text-xs font-mono text-(--color-text-secondary) bg-(--color-bg-subtle) px-2 py-1 rounded self-start">
+              <code className="text-[12px] font-mono text-(--color-text-secondary) bg-(--color-bg-subtle) px-2 py-1 rounded self-start">
                 border: {l.borderValue}
               </code>
-              <p className="text-xs font-mono text-(--color-text-hint)">{l.token}</p>
+              <p className="text-xs text-(--color-text-secondary)">{l.token}</p>
             </div>
           ))}
         </div>
         <div className="mt-4 rounded-(--radius-m) border border-(--color-border) overflow-hidden divide-y divide-(--color-border)">
           <div className="flex items-center gap-5 px-5 py-3 bg-(--color-bg-subtle) border-b border-(--color-border)">
-            <span className="text-xs font-medium text-(--color-text-hint) w-36 shrink-0">Background zone</span>
-            <span className="text-xs font-medium text-(--color-text-hint) flex-1">Token</span>
-            <span className="text-xs font-medium text-(--color-text-hint) w-24">Value</span>
+            <span className="text-xs font-medium text-(--color-text-secondary) w-36 shrink-0">Background zone</span>
+            <span className="text-xs font-medium text-(--color-text-secondary) flex-1">Token</span>
+            <span className="text-xs font-medium text-(--color-text-secondary) w-24">Value</span>
           </div>
           {[
             ['Page shell', '--background-page', '#FAFAFA'],
@@ -96,8 +96,8 @@ export default function EffectsPage() {
           ].map(([zone, token, value]) => (
             <div key={token as string} className="flex items-center gap-5 px-5 py-2.5 bg-(--color-bg-surface)">
               <span className="text-xs text-(--color-text-secondary) w-36 shrink-0">{zone as string}</span>
-              <code className="text-xs font-mono text-(--color-text-primary) flex-1">{token as string}</code>
-              <span className="text-xs font-mono text-(--color-text-hint) w-24">{value as string}</span>
+              <code className="text-[12px] font-mono text-(--color-text-primary) flex-1">{token as string}</code>
+              <span className="text-xs text-(--color-text-secondary) w-24">{value as string}</span>
             </div>
           ))}
         </div>
@@ -108,8 +108,8 @@ export default function EffectsPage() {
           {focusRings.map((f) => (
             <div key={f.element} className="flex items-start gap-5 px-5 py-3.5 bg-(--color-bg-surface)">
               <span className="text-xs font-medium text-(--color-text-primary) w-36 shrink-0 pt-px">{f.element}</span>
-              <code className="text-xs font-mono text-(--color-text-secondary) flex-1 pt-px">{f.rule}</code>
-              <span className="text-xs text-(--color-text-hint) w-52 shrink-0 pt-px">{f.note}</span>
+              <code className="text-[12px] font-mono text-(--color-text-secondary) flex-1 pt-px">{f.rule}</code>
+              <span className="text-xs text-(--color-text-secondary) w-52 shrink-0 pt-px">{f.note}</span>
             </div>
           ))}
         </div>
@@ -140,9 +140,9 @@ export default function EffectsPage() {
         <div className="rounded-(--radius-m) border border-(--color-border) overflow-hidden divide-y divide-(--color-border)">
           {motionTokens.map((m) => (
             <div key={m.token} className="flex items-center gap-5 px-5 py-3.5 bg-(--color-bg-surface)">
-              <code className="text-xs font-mono text-(--color-text-primary) w-36 shrink-0">{m.token}</code>
-              <span className="text-xs font-mono text-(--color-text-hint) w-16 shrink-0">{m.value}</span>
-              <span className="text-xs font-mono text-(--color-text-hint) w-20 shrink-0">{m.easing}</span>
+              <code className="text-[12px] font-mono text-(--color-text-primary) w-36 shrink-0">{m.token}</code>
+              <span className="text-xs text-(--color-text-secondary) w-16 shrink-0">{m.value}</span>
+              <span className="text-xs text-(--color-text-secondary) w-20 shrink-0">{m.easing}</span>
               <span className="text-xs text-(--color-text-secondary)">{m.use}</span>
             </div>
           ))}
@@ -155,8 +155,8 @@ export default function EffectsPage() {
           ].map(([label, css, note]) => (
             <div key={label as string} className="flex items-start gap-5 px-5 py-3 bg-(--color-bg-surface)">
               <span className="text-xs font-medium text-(--color-text-primary) w-28 shrink-0 pt-px">{label as string}</span>
-              <code className="text-xs font-mono text-(--color-text-secondary) flex-1 pt-px">{css as string}</code>
-              <span className="text-xs text-(--color-text-hint) w-36 shrink-0 pt-px">{note as string}</span>
+              <code className="text-[12px] font-mono text-(--color-text-secondary) flex-1 pt-px">{css as string}</code>
+              <span className="text-xs text-(--color-text-secondary) w-36 shrink-0 pt-px">{note as string}</span>
             </div>
           ))}
         </div>

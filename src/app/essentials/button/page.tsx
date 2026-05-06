@@ -19,7 +19,7 @@ export default function ButtonPage() {
             <button className="px-4 py-2 text-sm font-medium rounded-(--radius-s) text-(--color-text-secondary) hover:bg-(--color-bg-subtle) hover:text-(--color-text-primary) transition-colors">
               Ghost
             </button>
-            <button className="px-4 py-2 text-sm font-medium rounded-(--radius-s) bg-red-600 text-white hover:bg-red-700 transition-colors">
+            <button className="px-4 py-2 text-sm font-medium rounded-(--radius-s) text-white hover:opacity-80 transition-opacity" style={{ backgroundColor: 'var(--color-error)' }}>
               Danger
             </button>
           </div>
@@ -68,7 +68,7 @@ export default function ButtonPage() {
             ['Compact vs default', 'Default height: 36px. Use compact (28px) in dense UI like table rows. Never below 28px.'],
           ].map(([label, rule]) => (
             <div key={label as string} className="flex gap-6 px-5 py-3.5 bg-(--color-bg-surface)">
-              <span className="text-xs font-semibold text-(--color-text-primary) w-28 shrink-0 pt-px">{label}</span>
+              <span className="text-xs font-medium text-(--color-text-primary) w-28 shrink-0 pt-px">{label}</span>
               <p className="text-xs text-(--color-text-secondary) leading-relaxed">{rule}</p>
             </div>
           ))}

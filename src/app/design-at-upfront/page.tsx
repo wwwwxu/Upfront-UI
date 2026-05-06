@@ -28,12 +28,12 @@ const items = [
 export default function DesignAtUpfrontPage() {
   return (
     <div className="px-14 py-16">
-      <h1 className="font-display text-[80px] font-bold tracking-tight leading-none text-(--color-text-primary) mb-4">
+      <h1 className="font-display text-[80px] font-black tracking-tight leading-none text-(--color-text-primary) mb-4">
         DESIGN AT
       </h1>
-      <h1 className="font-display text-[80px] font-bold tracking-tight leading-none text-(--color-text-primary) mb-16">
+      <p className="font-display text-[80px] font-black tracking-tight leading-none text-(--color-text-primary) mb-16" aria-hidden="true">
         UPFRONT
-      </h1>
+      </p>
       <p className="text-base text-(--color-text-secondary) leading-relaxed max-w-[560px] mb-12">
         Brand philosophy, design principles, and the thinking behind the design system powering the UPFRONT platform.
       </p>
@@ -50,10 +50,10 @@ export default function DesignAtUpfrontPage() {
               </span>
             </div>
             <div className="px-4 py-4 bg-(--color-bg-surface)">
-              <p className="text-sm font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors mb-1">
+              <p className="text-sm font-medium text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors mb-1">
                 {item.title}
               </p>
-              <p className="text-xs text-(--color-text-hint) leading-relaxed">{item.desc}</p>
+              <p className="text-xs text-(--color-text-secondary) leading-relaxed">{item.desc}</p>
             </div>
           </Link>
         ))}

@@ -16,7 +16,7 @@ function CarouselDemo() {
   return (
     <div className="relative rounded-(--radius-m) border border-(--color-border) overflow-hidden bg-(--color-bg-dark) text-white" style={{ minHeight: 200 }}>
       <div className="p-8">
-        <p className="text-xs font-mono text-white/40 mb-4">{slide.num}</p>
+        <p className="text-[12px] font-mono text-white/40 mb-4">{slide.num}</p>
         <h3 className="text-2xl font-bold font-display tracking-tight leading-tight mb-3">{slide.title}</h3>
         <p className="text-sm text-white/60 leading-relaxed max-w-[400px]">{slide.desc}</p>
       </div>
@@ -67,7 +67,7 @@ export default function CarouselPage() {
             ['Mobile', 'Swipe gesture only. No visible arrow buttons. Dot indicator centered at bottom. Full bleed card layout.'],
           ].map(([label, desc]) => (
             <div key={label as string} className="flex gap-6 px-5 py-4 bg-(--color-bg-surface)">
-              <span className="text-xs font-semibold text-(--color-text-primary) w-20 shrink-0 pt-px">{label}</span>
+              <span className="text-xs font-medium text-(--color-text-primary) w-20 shrink-0 pt-px">{label}</span>
               <p className="text-xs text-(--color-text-secondary) leading-relaxed">{desc}</p>
             </div>
           ))}
@@ -78,12 +78,12 @@ export default function CarouselPage() {
         <div className="space-y-0">
           {[
             ['Slide container', 'overflow-hidden · rounded-(--radius-m)', 'Clips slides to the card boundary.'],
-            ['Counter label', 'text-xs font-mono · top-left', '"01 / 04" — contextualizes position within the sequence.'],
+            ['Counter label', 'text-[12px] font-mono · top-left', '"01 / 04" — contextualizes position within the sequence.'],
             ['Dot indicator', 'Active dot: wider pill. Inactive: small circle.', 'Touch target for direct navigation on both variants.'],
             ['Prev/Next buttons', 'Bottom-right, desktop only · 32×32px', 'Circular border buttons. Hidden on mobile.'],
           ].map(([layer, token, note]) => (
             <DocRow key={layer as string} label={layer as string} description={note as string}>
-              <code className="text-xs font-mono text-(--color-text-secondary) bg-(--color-bg-subtle) px-2 py-1 rounded">{token}</code>
+              <code className="text-[12px] font-mono text-(--color-text-secondary) bg-(--color-bg-subtle) px-2 py-1 rounded">{token}</code>
             </DocRow>
           ))}
         </div>
@@ -98,7 +98,7 @@ export default function CarouselPage() {
             ['Accessibility', 'Each slide must be keyboard-focusable. Provide aria-labels for all controls. Respect prefers-reduced-motion.'],
           ].map(([label, rule]) => (
             <div key={label as string} className="flex gap-6 px-5 py-3.5 bg-(--color-bg-surface)">
-              <span className="text-xs font-semibold text-(--color-text-primary) w-28 shrink-0 pt-px">{label}</span>
+              <span className="text-xs font-medium text-(--color-text-primary) w-28 shrink-0 pt-px">{label}</span>
               <p className="text-xs text-(--color-text-secondary) leading-relaxed">{rule}</p>
             </div>
           ))}

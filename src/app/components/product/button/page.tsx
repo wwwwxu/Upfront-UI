@@ -216,7 +216,7 @@ export default async function ButtonPage() {
             <CopyButton text={CLI_COMMAND} />
           </div>
           <div className="px-4 py-3.5 bg-(--color-bg-page)">
-            <code className="text-sm font-mono text-(--color-text-primary)">{CLI_COMMAND}</code>
+            <code className="text-xs font-mono text-(--color-text-primary)">{CLI_COMMAND}</code>
           </div>
         </div>
       </DocSection>
@@ -263,7 +263,7 @@ export default async function ButtonPage() {
             ['Compact vs default', 'Default height: 36px. Use compact (28px) in dense UI like table rows. Never below 28px.'],
           ].map(([label, rule]) => (
             <div key={label as string} className="flex gap-6 px-5 py-3.5 bg-(--color-bg-surface)">
-              <span className="text-xs font-semibold text-(--color-text-primary) w-28 shrink-0 pt-px">{label}</span>
+              <span className="text-xs font-medium text-(--color-text-primary) w-28 shrink-0 pt-px">{label}</span>
               <p className="text-xs text-(--color-text-secondary) leading-relaxed">{rule}</p>
             </div>
           ))}

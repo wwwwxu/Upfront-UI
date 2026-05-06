@@ -50,7 +50,7 @@ export default function ChipsPage() {
         <div className="space-y-4">
           {useCaseGroups.map((group) => (
             <div key={group.label} className="flex gap-4 py-4 border-b border-(--color-border) last:border-0">
-              <span className="text-xs font-semibold text-(--color-text-hint) w-40 shrink-0 pt-1">{group.label}</span>
+              <span className="text-xs font-medium text-(--color-text-secondary) w-40 shrink-0 pt-1">{group.label}</span>
               <div className="flex flex-wrap gap-2">
                 {group.chips.map((chip) => (
                   <span
@@ -69,19 +69,19 @@ export default function ChipsPage() {
       <DocSection title="States">
         <div className="rounded-(--radius-m) border border-(--color-border) bg-(--color-bg-page) p-8 flex flex-wrap gap-4 items-start">
           <div className="flex flex-col gap-2 items-start">
-            <span className="text-[10px] text-(--color-text-hint) uppercase tracking-widest">Default</span>
+            <span className="text-xs text-(--color-text-secondary)">Default</span>
             <span className="px-3.5 py-1.5 text-xs font-medium rounded-full border border-(--color-border) bg-(--color-bg-surface) text-(--color-text-secondary)">Plan a trip</span>
           </div>
           <div className="flex flex-col gap-2 items-start">
-            <span className="text-[10px] text-(--color-text-hint) uppercase tracking-widest">Hover</span>
+            <span className="text-xs text-(--color-text-secondary)">Hover</span>
             <span className="px-3.5 py-1.5 text-xs font-medium rounded-full border border-(--color-border) bg-(--color-bg-subtle) text-(--color-text-primary)">Plan a trip</span>
           </div>
           <div className="flex flex-col gap-2 items-start">
-            <span className="text-[10px] text-(--color-text-hint) uppercase tracking-widest">Selected</span>
+            <span className="text-xs text-(--color-text-secondary)">Selected</span>
             <span className="px-3.5 py-1.5 text-xs font-medium rounded-full bg-(--color-text-primary) text-white border border-(--color-text-primary)">Plan a trip</span>
           </div>
           <div className="flex flex-col gap-2 items-start">
-            <span className="text-[10px] text-(--color-text-hint) uppercase tracking-widest">Disabled</span>
+            <span className="text-xs text-(--color-text-secondary)">Disabled</span>
             <span className="px-3.5 py-1.5 text-xs font-medium rounded-full border border-(--color-border) bg-(--color-bg-subtle) text-(--color-text-hint) cursor-not-allowed">Plan a trip</span>
           </div>
         </div>
@@ -96,7 +96,7 @@ export default function ChipsPage() {
             ['Horizontal row', 'flex gap-2 · overflow-x-auto on mobile', 'Chips scroll horizontally on narrow viewports.'],
           ].map(([layer, token, note]) => (
             <DocRow key={layer as string} label={layer as string} description={note as string}>
-              <code className="text-xs font-mono text-(--color-text-secondary) bg-(--color-bg-subtle) px-2 py-1 rounded">{token}</code>
+              <code className="text-[12px] font-mono text-(--color-text-secondary) bg-(--color-bg-subtle) px-2 py-1 rounded">{token}</code>
             </DocRow>
           ))}
         </div>

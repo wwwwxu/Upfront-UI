@@ -17,9 +17,9 @@ function EmptyStateDemo({
     <div className="p-10 rounded-(--radius-m) border border-(--color-border) bg-(--color-bg-surface) flex flex-col items-center text-center gap-4 max-w-xs mx-auto">
       {icon}
       <div className="space-y-1">
-        <p className="text-sm font-semibold text-(--color-text-primary) font-display">Nothing here yet</p>
+        <p className="text-sm font-medium text-(--color-text-primary) font-display">Nothing here yet</p>
         {variant !== 'title-only' && (
-          <p className="text-xs text-(--color-text-hint) leading-relaxed">
+          <p className="text-xs text-(--color-text-secondary) leading-relaxed">
             {variant === 'default' ? 'Create your first item to get started.' : 'Items will appear here once added.'}
           </p>
         )}
@@ -61,7 +61,7 @@ export default function EmptyStatePage() {
           {(['default', 'minimal', 'title-only'] as const).map((v) => (
             <div key={v}>
               <EmptyStateDemo variant={v} />
-              <p className="mt-3 text-center text-xs font-medium text-(--color-text-hint) capitalize">
+              <p className="mt-3 text-center text-xs font-medium text-(--color-text-secondary) capitalize">
                 {v.replace('-', ' ')}
               </p>
             </div>
@@ -78,7 +78,7 @@ export default function EmptyStatePage() {
             ['CTA', 'Primary button · optional', 'Only in Default variant. Single action.'],
           ].map(([layer, token, note]) => (
             <DocRow key={layer as string} label={layer as string} description={note as string}>
-              <code className="text-xs font-mono text-(--color-text-secondary) bg-(--color-bg-subtle) px-2 py-1 rounded">
+              <code className="text-[12px] font-mono text-(--color-text-secondary) bg-(--color-bg-subtle) px-2 py-1 rounded">
                 {token}
               </code>
             </DocRow>

@@ -18,16 +18,16 @@ export default function GridPage() {
         <div className="rounded-(--radius-m) border border-(--color-border) overflow-hidden">
           <div className="grid grid-cols-4 gap-0 px-5 py-2.5 bg-(--color-bg-subtle) border-b border-(--color-border)">
             {['Breakpoint', 'Columns', 'Column gap', 'Side margin'].map((h) => (
-              <span key={h} className="text-xs font-medium text-(--color-text-hint)">{h}</span>
+              <span key={h} className="text-xs font-medium text-(--color-text-secondary)">{h}</span>
             ))}
           </div>
           <div className="divide-y divide-(--color-border)">
             {gridBreakpoints.map((r) => (
               <div key={r.bp} className="grid grid-cols-4 gap-0 px-5 py-3 bg-(--color-bg-surface)">
                 <span className="text-xs font-medium text-(--color-text-primary)">{r.bp}</span>
-                <span className="text-xs font-mono text-(--color-text-hint)">{r.cols}</span>
-                <span className="text-xs font-mono text-(--color-text-hint)">{r.gap}</span>
-                <span className="text-xs font-mono text-(--color-text-hint)">{r.margin}</span>
+                <span className="text-xs text-(--color-text-secondary)">{r.cols}</span>
+                <span className="text-xs text-(--color-text-secondary)">{r.gap}</span>
+                <span className="text-xs text-(--color-text-secondary)">{r.margin}</span>
               </div>
             ))}
           </div>
@@ -44,8 +44,8 @@ export default function GridPage() {
             { token: '--grid-gap-mobile',         value: '12px',   use: 'Mobile column gap' },
           ].map((t) => (
             <div key={t.token} className="flex items-center gap-5 px-5 py-2.5 bg-(--color-bg-surface)">
-              <code className="text-xs font-mono text-(--color-text-primary) w-56 shrink-0">{t.token}</code>
-              <span className="text-xs font-mono text-(--color-text-hint) w-16 shrink-0">{t.value}</span>
+              <code className="text-[12px] font-mono text-(--color-text-primary) w-56 shrink-0">{t.token}</code>
+              <span className="text-xs text-(--color-text-secondary) w-16 shrink-0">{t.value}</span>
               <span className="text-xs text-(--color-text-secondary)">{t.use}</span>
             </div>
           ))}
@@ -55,13 +55,13 @@ export default function GridPage() {
       <DocSection title="Grid visualization — Desktop 1440px">
         <div className="rounded-(--radius-m) border border-(--color-border) overflow-hidden">
           <div className="bg-(--color-bg-subtle) px-5 py-3 border-b border-(--color-border)">
-            <p className="text-xs font-mono text-(--color-text-hint)">12 columns · 12px gap · 32px margin · max-width 1440px</p>
+            <p className="text-xs text-(--color-text-secondary)">12 columns · 12px gap · 32px margin · max-width 1440px</p>
           </div>
           <div className="p-4 bg-(--color-bg-surface)">
             <div className="flex gap-1.5">
               {Array.from({ length: 12 }).map((_, i) => (
                 <div key={i} className="flex-1 h-12 bg-(--color-accent-bg) rounded-sm flex items-center justify-center">
-                  <span className="text-xs font-mono text-(--color-accent)">{i + 1}</span>
+                  <span className="text-[12px] font-mono text-(--color-accent)">{i + 1}</span>
                 </div>
               ))}
             </div>
@@ -73,14 +73,14 @@ export default function GridPage() {
         <div className="space-y-4 text-sm text-(--color-text-secondary)">
           <div className="rounded-(--radius-m) border border-(--color-border) overflow-hidden">
             <div className="bg-(--color-bg-subtle) px-5 py-3 border-b border-(--color-border)">
-              <p className="text-xs font-mono text-(--color-text-hint)">Docs layout structure</p>
+              <p className="text-xs text-(--color-text-secondary)">Docs layout structure</p>
             </div>
             <div className="flex h-32 divide-x divide-(--color-border)">
               <div className="w-16 bg-(--color-accent-bg) flex items-center justify-center shrink-0">
                 <span className="text-xs font-medium text-(--color-accent) -rotate-90 whitespace-nowrap">Sidebar 256px</span>
               </div>
               <div className="flex-1 flex items-center justify-center bg-(--color-bg-surface)">
-                <span className="text-xs text-(--color-text-hint)">Content area · max-w-[860px] · px-10</span>
+                <span className="text-xs text-(--color-text-secondary)">Content area · max-w-[860px] · px-10</span>
               </div>
             </div>
           </div>

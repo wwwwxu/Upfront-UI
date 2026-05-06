@@ -24,7 +24,7 @@ export default function IntroductionPage() {
               className="rounded-(--radius-m) overflow-hidden border border-(--color-border)"
             >
               <div className="h-16 flex items-end px-4 pb-3" style={{ backgroundColor: p.color }}>
-                <span className="text-sm font-semibold font-display" style={{ color: p.textColor }}>{p.name}</span>
+                <span className="text-sm font-medium font-display" style={{ color: p.textColor }}>{p.name}</span>
               </div>
               <div className="p-4 bg-(--color-bg-surface)">
                 <p className="text-xs text-(--color-text-secondary) leading-relaxed">{p.desc}</p>

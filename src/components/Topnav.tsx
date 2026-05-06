@@ -33,7 +33,7 @@ function Logo() {
         className="h-8 w-8 object-contain"
         priority
       />
-      <span className="text-sm font-semibold text-(--color-text-primary) tracking-tight leading-none uppercase">
+      <span className="text-sm font-medium text-(--color-text-primary) tracking-tight leading-none">
         Upfront Design
       </span>
     </Link>
@@ -58,7 +58,7 @@ export default function Topnav() {
             className={[
               'px-3.5 py-1.5 text-sm rounded-(--radius-s) transition-colors',
               isActive(item)
-                ? 'font-semibold text-(--color-text-primary)'
+                ? 'font-medium text-(--color-text-primary)'
                 : 'text-(--color-text-secondary) hover:text-(--color-text-primary)',
             ].join(' ')}
           >

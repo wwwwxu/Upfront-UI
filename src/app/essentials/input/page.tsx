@@ -34,7 +34,8 @@ export default function InputPage() {
             <div>
               <label className="block text-xs font-medium text-(--color-text-secondary) mb-1.5">Focus</label>
               <input
-                className="w-full px-3 py-2 text-sm rounded-(--radius-s) border border-(--color-border) bg-(--color-bg-surface) text-(--color-text-primary) outline-none ring-2 ring-(--color-border) ring-opacity-20"
+                className="w-full px-3 py-2 text-sm rounded-(--radius-s) bg-(--color-bg-surface) text-(--color-text-primary) outline-none"
+                style={{ border: '1px solid var(--color-border-strong)' }}
                 defaultValue="hello@example.com"
               />
             </div>
@@ -42,13 +43,13 @@ export default function InputPage() {
               <label className="block text-xs font-medium text-(--color-text-secondary) mb-1.5">Error</label>
               <input
                 className="w-full px-3 py-2 text-sm rounded-(--radius-s) bg-(--color-bg-surface) text-(--color-text-primary) outline-none"
-                style={{ border: '1px solid #C02020' }}
+                style={{ border: '1px solid var(--color-error)' }}
                 defaultValue="invalid-email"
               />
-              <p className="mt-1.5 text-xs" style={{ color: '#C02020' }}>Enter a valid email address.</p>
+              <p className="mt-1.5 text-xs text-(--color-error)">Enter a valid email address.</p>
             </div>
             <div>
-              <label className="block text-xs font-medium text-(--color-text-hint) mb-1.5">Disabled</label>
+              <label className="block text-xs font-medium text-(--color-text-secondary) mb-1.5">Disabled</label>
               <input
                 className="w-full px-3 py-2 text-sm rounded-(--radius-s) border border-(--color-border) bg-(--color-bg-subtle) text-(--color-text-hint) outline-none cursor-not-allowed"
                 disabled
@@ -96,7 +97,7 @@ export default function InputPage() {
             ['Helper text', 'text-xs · mt-1.5', 'Error message, hint text, or character count below the field.'],
           ].map(([layer, token, note]) => (
             <DocRow key={layer as string} label={layer as string} description={note as string}>
-              <code className="text-xs font-mono text-(--color-text-secondary) bg-(--color-bg-subtle) px-2 py-1 rounded">{token}</code>
+              <code className="text-[12px] font-mono text-(--color-text-secondary) bg-(--color-bg-subtle) px-2 py-1 rounded">{token}</code>
             </DocRow>
           ))}
         </div>

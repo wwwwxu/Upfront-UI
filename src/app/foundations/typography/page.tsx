@@ -70,11 +70,11 @@ export default function TypographyPage() {
               <div className="flex items-start justify-between gap-2 mb-3">
                 <p className={`text-3xl font-bold text-(--color-text-primary) ${f.class} tracking-tight`}>{f.name}</p>
                 {f.bundled && (
-                  <span className="text-[10px] font-medium px-1.5 py-0.5 rounded bg-(--color-bg-subtle) text-(--color-text-hint) shrink-0 mt-1">Bundled</span>
+                  <span className="text-xs font-medium px-1.5 py-0.5 rounded bg-(--color-bg-subtle) text-(--color-text-secondary) shrink-0 mt-1">Bundled</span>
                 )}
               </div>
-              <p className="text-xs font-semibold text-(--color-text-secondary) mb-1">{f.role}</p>
-              <p className="text-xs text-(--color-text-hint) leading-relaxed">{f.note}</p>
+              <p className="text-xs font-medium text-(--color-text-secondary) mb-1">{f.role}</p>
+              <p className="text-xs text-(--color-text-secondary) leading-relaxed">{f.note}</p>
             </div>
           ))}
         </div>
@@ -97,9 +97,9 @@ export default function TypographyPage() {
               </span>
               <div className="flex-1">
                 <p className="text-sm font-medium text-(--color-text-primary)">{w.style} {w.weight}</p>
-                <p className="text-xs text-(--color-text-hint) leading-relaxed mt-0.5 max-w-[400px]">{w.use}</p>
+                <p className="text-xs text-(--color-text-secondary) leading-relaxed mt-0.5 max-w-[400px]">{w.use}</p>
               </div>
-              <span className="text-xs font-mono text-(--color-text-hint) shrink-0">--font-weight-{w.style.toLowerCase()}</span>
+              <span className="text-xs text-(--color-text-secondary) shrink-0">--font-weight-{w.style.toLowerCase()}</span>
             </div>
           ))}
         </div>
@@ -116,13 +116,13 @@ export default function TypographyPage() {
                 {t.name}
               </div>
               <div className="flex flex-wrap items-center gap-x-6 gap-y-1">
-                <span className="text-xs font-mono text-(--color-text-hint)">{t.token}</span>
-                <span className="text-xs font-mono text-(--color-text-hint)">{t.size}px</span>
-                <span className="text-xs font-mono text-(--color-text-hint)">lh {t.lh}px</span>
-                <span className="text-xs font-mono text-(--color-text-hint)">ls {t.ls}</span>
-                <span className="text-xs font-mono text-(--color-text-hint)">{weightLabels[t.weight]}</span>
+                <span className="text-xs text-(--color-text-secondary)">{t.token}</span>
+                <span className="text-xs text-(--color-text-secondary)">{t.size}px</span>
+                <span className="text-xs text-(--color-text-secondary)">lh {t.lh}px</span>
+                <span className="text-xs text-(--color-text-secondary)">ls {t.ls}</span>
+                <span className="text-xs text-(--color-text-secondary)">{weightLabels[t.weight]}</span>
               </div>
-              <p className="text-xs text-(--color-text-hint) mt-1.5">{t.role}</p>
+              <p className="text-xs text-(--color-text-secondary) mt-1.5">{t.role}</p>
             </div>
           ))}
         </div>
@@ -132,19 +132,19 @@ export default function TypographyPage() {
         <div className="rounded-(--radius-m) border border-(--color-border) overflow-hidden">
           <div className="grid grid-cols-[160px_120px_60px_50px_50px_80px_1fr] gap-0 px-5 py-2.5 bg-(--color-bg-subtle) border-b border-(--color-border)">
             {['Role', 'Figma name', 'Size', 'Weight', 'L.H.', 'Tracking', 'Notes'].map((h) => (
-              <span key={h} className="text-xs font-medium text-(--color-text-hint)">{h}</span>
+              <span key={h} className="text-xs font-medium text-(--color-text-secondary)">{h}</span>
             ))}
           </div>
           <div className="divide-y divide-(--color-border)">
             {typeRoles.map((r) => (
               <div key={r.role} className="grid grid-cols-[160px_120px_60px_50px_50px_80px_1fr] gap-0 px-5 py-2.5 bg-(--color-bg-surface)">
                 <span className="text-xs font-medium text-(--color-text-primary)">{r.role}</span>
-                <span className="text-xs font-mono text-(--color-text-secondary)">{r.figma}</span>
-                <span className="text-xs font-mono text-(--color-text-hint)">{r.size}px</span>
-                <span className="text-xs font-mono text-(--color-text-hint)">{r.weight}</span>
-                <span className="text-xs font-mono text-(--color-text-hint)">{r.lh}px</span>
-                <span className="text-xs font-mono text-(--color-text-hint)">{r.tracking}</span>
-                <span className="text-xs text-(--color-text-hint) leading-relaxed">{r.notes}</span>
+                <span className="text-xs text-(--color-text-secondary)">{r.figma}</span>
+                <span className="text-xs text-(--color-text-secondary)">{r.size}px</span>
+                <span className="text-xs text-(--color-text-secondary)">{r.weight}</span>
+                <span className="text-xs text-(--color-text-secondary)">{r.lh}px</span>
+                <span className="text-xs text-(--color-text-secondary)">{r.tracking}</span>
+                <span className="text-xs text-(--color-text-secondary) leading-relaxed">{r.notes}</span>
               </div>
             ))}
           </div>
@@ -164,7 +164,7 @@ export default function TypographyPage() {
             ['Monospace', 'Monospace Neon Var is the only monospace font. Only in code blocks and code UI — never for data values, labels, or non-code text.'],
           ].map(([label, rule]) => (
             <div key={label as string} className="flex gap-6 px-5 py-4 bg-(--color-bg-surface)">
-              <span className="text-xs font-semibold text-(--color-text-primary) w-28 shrink-0 pt-px">{label}</span>
+              <span className="text-xs font-medium text-(--color-text-primary) w-28 shrink-0 pt-px">{label}</span>
               <p className="text-xs text-(--color-text-secondary) leading-relaxed">{rule}</p>
             </div>
           ))}

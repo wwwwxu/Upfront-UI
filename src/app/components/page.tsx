@@ -155,7 +155,7 @@ const productComponents = [
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" stroke="#A1A1AA" strokeWidth="1.5" strokeLinecap="round"/></svg>
         </div>
         <div className="text-center">
-          <p className="text-[11px] font-semibold text-[#131316]">Nothing here yet</p>
+          <p className="text-xs font-medium text-(--color-text-primary)">Nothing here yet</p>
           <p className="text-[10px] text-[#A1A1AA] mt-0.5">Get started to see content</p>
         </div>
       </div>
@@ -174,7 +174,7 @@ function CardGrid({ items }: { items: typeof productComponents }) {
         >
           <div className="h-44 overflow-hidden">{item.preview}</div>
           <div className="px-4 py-3 bg-(--color-bg-surface)">
-            <p className="text-sm font-semibold text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">
+            <p className="text-sm font-medium text-(--color-text-primary) group-hover:text-(--color-accent) transition-colors">
               {item.title}
             </p>
           </div>
@@ -187,22 +187,22 @@ function CardGrid({ items }: { items: typeof productComponents }) {
 export default function ComponentsPage() {
   return (
     <div className="px-14 py-16">
-      <h1 className="font-display text-[80px] font-bold tracking-tight leading-none text-(--color-text-primary) mb-16">
+      <h1 className="font-display text-[80px] font-black tracking-tight leading-none text-(--color-text-primary) mb-16">
         COMPONENTS
       </h1>
 
       <section className="mb-14">
         <div className="flex items-baseline gap-4 mb-6">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-(--color-text-hint)">Product</h2>
-          <p className="text-sm text-(--color-text-hint)">Core UI components for all product surfaces</p>
+          <h2 className="text-lg font-medium text-(--color-text-primary) tracking-tight">Product</h2>
+          <p className="text-sm text-(--color-text-secondary)">Core UI components for all product surfaces</p>
         </div>
         <CardGrid items={productComponents} />
       </section>
 
       <section>
         <div className="flex items-baseline gap-4 mb-6">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-(--color-text-hint)">Website</h2>
-          <p className="text-sm text-(--color-text-hint)">E-commerce and marketing surface components</p>
+          <h2 className="text-lg font-medium text-(--color-text-primary) tracking-tight">Website</h2>
+          <p className="text-sm text-(--color-text-secondary)">E-commerce and marketing surface components</p>
         </div>
         <div className="rounded-(--radius-m) border border-(--color-border) border-dashed p-12 flex items-center justify-center">
           <p className="text-sm text-(--color-text-hint)">Coming soon — website components will be added here.</p>

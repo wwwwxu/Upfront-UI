@@ -9,7 +9,7 @@ export default function IconsPage() {
     >
       <DocSection title="Usage">
         <p className="text-sm text-(--color-text-secondary) leading-relaxed max-w-[580px]">
-          All icons are exported from the Figma source file. Do not install icon packages — use assets provided directly from the design file or as inline SVGs. Icons scale with the surrounding text and should be sized at <code className="font-mono text-(--color-text-primary) bg-(--color-bg-subtle) px-1.5 py-0.5 rounded">16px</code> or <code className="font-mono text-(--color-text-primary) bg-(--color-bg-subtle) px-1.5 py-0.5 rounded">24px</code> by default.
+          All icons are exported from the Figma source file. Do not install icon packages — use assets provided directly from the design file or as inline SVGs. Icons scale with the surrounding text and should be sized at <code className="text-[12px] font-mono text-(--color-text-primary) bg-(--color-bg-subtle) px-1.5 py-0.5 rounded">16px</code> or <code className="text-[12px] font-mono text-(--color-text-primary) bg-(--color-bg-subtle) px-1.5 py-0.5 rounded">24px</code> by default.
         </p>
       </DocSection>
 

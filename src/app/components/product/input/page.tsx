@@ -125,7 +125,7 @@ export function Input({
         <p className="mt-1.5 text-xs text-(--color-error)">{error}</p>
       )}
       {hint && !error && (
-        <p className="mt-1.5 text-xs text-(--color-text-hint)">{hint}</p>
+        <p className="mt-1.5 text-xs text-(--color-text-secondary)">{hint}</p>
       )}
     </div>
   )
@@ -280,7 +280,7 @@ export default async function InputPage() {
             <CopyButton text={CLI_COMMAND} />
           </div>
           <div className="px-4 py-3.5 bg-(--color-bg-page)">
-            <code className="text-sm font-mono text-(--color-text-primary)">{CLI_COMMAND}</code>
+            <code className="text-xs font-mono text-(--color-text-primary)">{CLI_COMMAND}</code>
           </div>
         </div>
       </DocSection>
@@ -311,7 +311,7 @@ export default async function InputPage() {
             ['Helper text', 'text-xs · mt-1.5', 'Error message, hint text, or character count below the field.'],
           ].map(([layer, token, note]) => (
             <DocRow key={layer as string} label={layer as string} description={note as string}>
-              <code className="text-xs font-mono text-(--color-text-secondary) bg-(--color-bg-subtle) px-2 py-1 rounded">{token}</code>
+              <code className="text-[12px] font-mono text-(--color-text-secondary) bg-(--color-bg-subtle) px-2 py-1 rounded">{token}</code>
             </DocRow>
           ))}
         </div>

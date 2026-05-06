@@ -38,30 +38,32 @@ const radii = [
   { name: '--radius-circle', value: '999px', label: 'Circle', use: 'Avatars and circular controls only' },
 ]
 
+const MAX_SPACING = 120
+
 export default function SpacingPage() {
   return (
     <DocLayout
       breadcrumb="Foundations"
-      title="Spacing, Radius & Grids"
+      title="Spacing & Radius"
       description="Working from a defined spacing system allows you to move faster and more consistently. Consistent spacing eliminates guesswork in design and development."
     >
       <DocSection title="Spacing scale" description="Pre-defined spacing values for gaps, padding, and margin across all components. Figma token names (spacing-xs etc.) are the semantic names; CSS tokens (--spacing-N) are what components reference in code.">
         <div className="rounded-(--radius-m) border border-(--color-border) overflow-hidden divide-y divide-(--color-border)">
-          <div className="grid grid-cols-[140px_140px_60px_1fr] gap-0 px-5 py-2 bg-(--color-bg-subtle) border-b border-(--color-border)">
-            {['Figma token', 'CSS variable', 'Value', ''].map((h) => (
-              <span key={h} className="text-xs font-medium text-(--color-text-hint)">{h}</span>
+          <div className="grid grid-cols-[160px_160px_52px_1fr] px-5 py-2 bg-(--color-bg-subtle)">
+            {['Figma name', 'CSS token', 'px', ''].map((h) => (
+              <span key={h} className="text-xs font-medium text-(--color-text-secondary)">{h}</span>
             ))}
           </div>
           {spacingTokens.map((t) => (
-            <div key={t.css} className="grid grid-cols-[140px_140px_60px_1fr] gap-0 items-center px-5 py-2.5 bg-(--color-bg-surface)">
-              <span className="text-xs font-mono text-(--color-text-hint)">{t.figma}</span>
-              <span className="text-xs font-mono text-(--color-text-primary)">{t.css}</span>
-              <span className="text-xs font-mono text-(--color-text-hint)">{t.px}px</span>
-              <div className="flex-1">
+            <div key={t.css} className="grid grid-cols-[160px_160px_52px_1fr] items-center px-5 py-2.5 bg-(--color-bg-surface)">
+              <span className="text-xs text-(--color-text-secondary)">{t.figma}</span>
+              <code className="text-[12px] font-mono text-(--color-text-secondary)">{t.css}</code>
+              <span className="text-xs text-(--color-text-secondary)">{t.px}</span>
+              <div className="pr-8">
                 {t.px > 0 && (
                   <div
-                    className="h-2 bg-(--color-accent) rounded-sm max-w-full"
-                    style={{ width: Math.min(t.px, 280) }}
+                    className="h-1.5 bg-(--color-text-primary) rounded-full"
+                    style={{ width: `${(t.px / MAX_SPACING) * 100}%` }}
                   />
                 )}
               </div>
@@ -72,14 +74,20 @@ export default function SpacingPage() {
 
       <DocSection title="Max widths" description="Pre-defined widths for wrapping content. Useful for defining max widths on text sections, page headings, and content containers.">
         <div className="rounded-(--radius-m) border border-(--color-border) overflow-hidden divide-y divide-(--color-border)">
+          <div className="flex items-center gap-5 px-5 py-2 bg-(--color-bg-subtle)">
+            <span className="text-xs font-medium text-(--color-text-secondary) w-24 shrink-0">Token</span>
+            <span className="text-xs font-medium text-(--color-text-secondary) w-14 shrink-0">px</span>
+            <span className="text-xs font-medium text-(--color-text-secondary) flex-1">Use</span>
+            <span className="text-xs font-medium text-(--color-text-secondary) w-40 shrink-0">Scale</span>
+          </div>
           {widthTokens.map((t) => (
             <div key={t.name} className="flex items-center gap-5 px-5 py-2.5 bg-(--color-bg-surface)">
-              <span className="text-xs font-mono text-(--color-text-primary) w-24 shrink-0">{t.name}</span>
-              <span className="text-xs font-mono text-(--color-text-hint) w-16 shrink-0">{t.px}px</span>
-              <span className="text-xs text-(--color-text-secondary) w-48 shrink-0">{t.use}</span>
-              <div className="flex-1 bg-(--color-bg-subtle) h-2 rounded-full overflow-hidden">
+              <code className="text-[12px] font-mono text-(--color-text-secondary) w-24 shrink-0">{t.name}</code>
+              <span className="text-xs text-(--color-text-secondary) w-14 shrink-0">{t.px}</span>
+              <span className="text-xs text-(--color-text-secondary) flex-1">{t.use}</span>
+              <div className="w-40 h-1.5 bg-(--color-bg-subtle) rounded-full overflow-hidden shrink-0">
                 <div
-                  className="h-full bg-(--color-accent) rounded-full"
+                  className="h-full bg-(--color-text-primary) rounded-full"
                   style={{ width: `${(t.px / 1400) * 100}%` }}
                 />
               </div>
@@ -89,25 +97,21 @@ export default function SpacingPage() {
       </DocSection>
 
       <DocSection title="Border radius" description="Upfront uses a sharp, angular radius scale. Large radii make UI feel consumer-app soft — not the Upfront character. When in doubt, go smaller.">
-        <div className="flex flex-wrap gap-6 items-end mb-6">
+        <div className="rounded-(--radius-m) border border-(--color-border) overflow-hidden divide-y divide-(--color-border)">
+          <div className="flex items-center gap-5 px-5 py-2 bg-(--color-bg-subtle)">
+            <div className="w-10 shrink-0" />
+            <span className="text-xs font-medium text-(--color-text-secondary) w-36 shrink-0">Token</span>
+            <span className="text-xs font-medium text-(--color-text-secondary) w-12 shrink-0">Value</span>
+            <span className="text-xs font-medium text-(--color-text-secondary)">Use</span>
+          </div>
           {radii.map((r) => (
-            <div key={r.name} className="flex flex-col items-center gap-3">
+            <div key={r.name} className="flex items-center gap-5 px-5 py-3 bg-(--color-bg-surface)">
               <div
-                className="w-16 h-16 bg-(--color-bg-subtle) border border-(--color-border)"
+                className="w-10 h-10 shrink-0 bg-(--color-bg-subtle) border border-(--color-border)"
                 style={{ borderRadius: r.value }}
               />
-              <div className="text-center">
-                <p className="text-xs font-semibold text-(--color-text-primary)">{r.label}</p>
-                <p className="text-xs font-mono text-(--color-text-hint) mt-0.5">{r.value}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="rounded-(--radius-m) border border-(--color-border) overflow-hidden divide-y divide-(--color-border)">
-          {radii.map((r) => (
-            <div key={r.name} className="flex items-center gap-5 px-5 py-2.5 bg-(--color-bg-surface)">
-              <span className="text-xs font-mono text-(--color-text-primary) w-36 shrink-0">{r.name}</span>
-              <span className="text-xs font-mono text-(--color-text-hint) w-14 shrink-0">{r.value}</span>
+              <code className="text-[12px] font-mono text-(--color-text-secondary) w-36 shrink-0">{r.name}</code>
+              <span className="text-xs text-(--color-text-secondary) w-12 shrink-0">{r.value}</span>
               <span className="text-xs text-(--color-text-secondary)">{r.use}</span>
             </div>
           ))}
@@ -125,8 +129,8 @@ export default function SpacingPage() {
           ].map(([element, token, rule]) => (
             <div key={element as string} className="flex items-start gap-5 px-5 py-3 bg-(--color-bg-surface)">
               <span className="text-xs font-medium text-(--color-text-primary) w-36 shrink-0 pt-px">{element}</span>
-              <code className="text-xs font-mono text-(--color-text-secondary) w-40 shrink-0 pt-px">{token}</code>
-              <p className="text-xs text-(--color-text-hint)">{rule}</p>
+              <code className="text-[12px] font-mono text-(--color-text-secondary) w-40 shrink-0 pt-px">{token}</code>
+              <p className="text-xs text-(--color-text-secondary)">{rule}</p>
             </div>
           ))}
         </div>

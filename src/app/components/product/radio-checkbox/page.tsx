@@ -83,7 +83,7 @@ export default function RadioCheckboxPage() {
         <div className="rounded-(--radius-m) border border-(--color-border) bg-(--color-bg-page) p-8">
           <div className="grid grid-cols-2 gap-10">
             <div>
-              <p className="text-[10px] text-(--color-text-hint) uppercase tracking-widest mb-4">Checkbox</p>
+              <p className="text-xs font-medium text-(--color-text-secondary) mb-4">Checkbox</p>
               <div className="flex flex-col gap-3">
                 <Checkbox checked={false} label="Default" />
                 <Checkbox checked={true} label="Checked" />
@@ -92,7 +92,7 @@ export default function RadioCheckboxPage() {
               </div>
             </div>
             <div>
-              <p className="text-[10px] text-(--color-text-hint) uppercase tracking-widest mb-4">Radio</p>
+              <p className="text-xs font-medium text-(--color-text-secondary) mb-4">Radio</p>
               <div className="flex flex-col gap-3">
                 <RadioBtn selected={false} label="Default" />
                 <RadioBtn selected={true} label="Selected" />
@@ -128,7 +128,7 @@ export default function RadioCheckboxPage() {
             ['Group spacing', 'gap-3 (12px) between options in a vertical list. Horizontal grouping: max 3–4 options.'],
           ].map(([label, rule]) => (
             <div key={label as string} className="flex gap-6 px-5 py-3.5 bg-(--color-bg-surface)">
-              <span className="text-xs font-semibold text-(--color-text-primary) w-36 shrink-0 pt-px">{label}</span>
+              <span className="text-xs font-medium text-(--color-text-primary) w-36 shrink-0 pt-px">{label}</span>
               <p className="text-xs text-(--color-text-secondary) leading-relaxed">{rule}</p>
             </div>
           ))}

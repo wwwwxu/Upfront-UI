@@ -50,10 +50,7 @@ export default function PrinciplesPage() {
                 className="h-44 flex items-center justify-center relative"
                 style={{ backgroundColor: '#F3F3F3' }}
               >
-                <span
-                  className="absolute top-4 left-4 text-[11px] font-medium tracking-widest"
-                  style={{ color: '#BBBBBB', fontFamily: 'ui-sans-serif, system-ui' }}
-                >
+                <span className="absolute top-4 left-4 text-xs font-medium text-(--color-text-secondary) tracking-tight">
                   {p.num}
                 </span>
                 <img
