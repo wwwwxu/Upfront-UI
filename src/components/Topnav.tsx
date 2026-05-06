@@ -34,7 +34,7 @@ function Logo() {
         priority
       />
       <span className="text-sm font-semibold text-(--color-text-primary) tracking-tight leading-none uppercase">
-        Upfront Design
+        Upfront Design System
       </span>
     </Link>
   )

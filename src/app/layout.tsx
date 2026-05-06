@@ -5,8 +5,8 @@ import MainContent from '@/components/MainContent'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Design System — Upfront',
-  description: 'A design system built for clarity, consistency, and delight.',
+  title: 'Upfront Design System',
+  description: 'The official Upfront design system — components, foundations, and guidelines.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

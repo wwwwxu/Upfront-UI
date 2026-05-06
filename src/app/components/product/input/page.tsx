@@ -45,7 +45,7 @@ import { EyeIcon } from "@/components/icons"
   rightIcon={<EyeIcon />}
 />`
 
-const CLI_COMMAND = 'npx shadcn@latest add https://ui-for-humans.upfront.nl/r/input.json'
+const CLI_COMMAND = 'npx shadcn@latest add https://ds.upfront.nl/r/input.json'
 
 const INPUT_SOURCE = `import * as React from 'react'
 

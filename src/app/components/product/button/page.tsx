@@ -49,7 +49,7 @@ const CODE_GROUP = `import { ButtonGroup, ButtonGroupItem } from "@/components/u
   <ButtonGroupItem>Board</ButtonGroupItem>
 </ButtonGroup>`
 
-const CLI_COMMAND = 'npx shadcn@latest add https://ui-for-humans.upfront.nl/r/button.json'
+const CLI_COMMAND = 'npx shadcn@latest add https://ds.upfront.nl/r/button.json'
 
 const BUTTON_SOURCE = `import * as React from 'react'
 
