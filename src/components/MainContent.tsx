@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation'
 
-const SIDEBAR_PATHS = ['/foundations', '/components', '/essentials', '/design-at-wise', '/introduction', '/principles', '/updates']
+const SIDEBAR_PATHS = ['/foundations', '/components', '/essentials', '/design-at-upfront', '/introduction', '/principles', '/updates']
 
 export default function MainContent({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()

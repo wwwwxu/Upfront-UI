@@ -25,7 +25,7 @@ const items = [
   },
 ]
 
-export default function DesignAtWisePage() {
+export default function DesignAtUpfrontPage() {
   return (
     <div className="px-14 py-16">
       <h1 className="font-display text-[80px] font-bold tracking-tight leading-none text-(--color-text-primary) mb-4">

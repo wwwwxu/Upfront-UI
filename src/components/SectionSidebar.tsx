@@ -13,7 +13,7 @@ const foundationItems = [
   { label: 'Icons',            href: '/foundations/icons' },
 ]
 
-const designAtWiseItems = [
+const designAtUpfrontItems = [
   { label: 'Introduction', href: '/introduction' },
   { label: 'Principles',   href: '/principles' },
   { label: 'Updates',      href: '/updates' },
@@ -105,7 +105,7 @@ export default function SectionSidebar() {
 
   const isFoundations = pathname.startsWith('/foundations')
   const isComponents  = pathname.startsWith('/components') || pathname.startsWith('/essentials')
-  const isDesignAt    = pathname.startsWith('/design-at-wise') || ['/introduction', '/principles', '/updates'].some(p => pathname.startsWith(p))
+  const isDesignAt    = pathname.startsWith('/design-at-upfront') || ['/introduction', '/principles', '/updates'].some(p => pathname.startsWith(p))
 
   if (!isFoundations && !isComponents && !isDesignAt) return null
 
@@ -113,7 +113,7 @@ export default function SectionSidebar() {
     <aside className="fixed left-0 top-14 bottom-0 w-[220px] border-r border-(--color-border) bg-(--color-bg-surface) z-40 overflow-y-auto">
       <nav className="py-8 px-4">
         {isFoundations && <NavGroup items={foundationItems} />}
-        {isDesignAt    && <NavGroup items={designAtWiseItems} />}
+        {isDesignAt    && <NavGroup items={designAtUpfrontItems} />}
         {isComponents  && <ComponentsNav />}
       </nav>
     </aside>

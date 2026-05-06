@@ -7,8 +7,8 @@ import { usePathname } from 'next/navigation'
 const navItems = [
   {
     label: 'Design at Upfront',
-    href: '/design-at-wise',
-    matches: ['/design-at-wise', '/introduction', '/principles', '/updates'],
+    href: '/design-at-upfront',
+    matches: ['/design-at-upfront', '/introduction', '/principles', '/updates'],
   },
   {
     label: 'Foundations',
